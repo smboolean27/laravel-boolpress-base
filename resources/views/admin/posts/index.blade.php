@@ -14,6 +14,7 @@
 		<tr>
 			<th>Immagine</th>
 			<th scope="col">Titolo</th>
+			<th scope="col">N Commenti</th>
 			<th scope="col">Data</th>
 			<th scope="col">Pubblicato</th>
 			<th scope="col">Azioni</th>
@@ -24,6 +25,7 @@
 		<tr>
 			<td><img src="{{$post->image ? $post->image : 'https://via.placeholder.com/200'}}" alt="{{$post->title}}" style="width: 100px"></td>
 			<td>{{$post->title}}</td>
+			<td>{{count($post->comments)}}</td>
 			<td>{{$post->date}}</td>
 			<td>{!! $post->published ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>'!!}</td>
 			<td>
